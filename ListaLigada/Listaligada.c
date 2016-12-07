@@ -298,6 +298,7 @@ int consulta_lista_id(Lista *li, int id, FUNCIONARIO *func){
 }
 
 void menu(Lista *li){
+    int y;
     int id,tam,x;
     char escolha;
     int chave=0;
@@ -346,20 +347,22 @@ void menu(Lista *li){
                 printf("Digite seu salario: ");
                 scanf("%i",&func.salario);
 
-                printf("Selecione o cargo desejado: \n\n");
+
                 lista_CBO();
+                printf("Selecione o cargo desejado: \n\n");
+                printf("\n\n");
                 scanf("%i",&func.cargo);
 
                 x=insere_ordenada_lista(li, func);
                 if(x){
-                    printf("Inserido com sucesso: %i ");
+                    printf("Inserido com sucesso");
                 }else{
                     printf("Erro ao inserir! ");
                 }
                 break;
             //Exibindo todos elementos
             case '7':
-           //     exibe_dados(func1);
+                exibe(li);
                 break;
             //Exibindo tamanho da lista
             case '8':
@@ -374,7 +377,24 @@ void menu(Lista *li){
             case 'b':
                 printf("Digite o id desejado para a remoção: ");
                 scanf("%i",&id);
+                x = consulta_lista_id(li,id,&func);
+                if(x){
+                    printf("Consulta realizada com sucesso!\n");
+                    printf("ID: %i\n",func.id);
+                    printf("Nome: %c \n",func.nome);
+                    printf("Idade: %i\n",func.idade);
+                    printf("Cargo: %i \n",func.cargo);
+                    printf("Salario: %i \n",func.salario);
+
+
+                }
+                printf("Tem certeza que deseja remover esse usuário? Digite 1 para remove-lo");
+                scanf("%i",&y);
+                if(y==1){
                 x = remove_lista(li,id);
+                }else{
+                break;
+                }
                 if(x){
                     printf("Removido com sucesso!");
                 }else{
@@ -389,12 +409,11 @@ void menu(Lista *li){
                 if(x){
                     printf("Consulta realizada com sucesso!\n");
                     printf("ID: %i\n",func.id);
-                    sprintf("Nome: %s \n",func.nome);
+                    printf("Nome: %s \n",func.nome);
                     printf("Idade: %i\n",func.idade);
                     printf("Cargo: %i \n",func.cargo);
                     printf("Salario: %i \n",func.salario);
 
-                    system("cls");
                 }
 
                 break;
@@ -428,13 +447,34 @@ void lista_CBO(){
         system("pause");
         exit(1);
     }
+    int i;
     char c = f1;
     while(c != EOF){
         printf("%c",c);
+
         c = fgetc(f1);
      }
 
      fclose(f1);
+}
+
+void exibe(Lista *li){
+
+        ELEM *no = *li;
+
+
+
+        while(no != NULL){
+
+        printf("\nID:%i",no->dados.id);
+        printf("\nNome:%c",no->dados.nome);
+        printf("\nIdade:%i",no->dados.idade);
+        printf("\nSalario:%i",no->dados.salario);
+        printf("\nCargo:%i \n",no->dados.cargo);
+        no = no->prox;
+
+        }
+
 }
 
 
