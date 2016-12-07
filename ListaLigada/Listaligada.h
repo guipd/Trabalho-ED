@@ -39,6 +39,8 @@ void apagaLista(Lista *li);
 
 void menu(Lista *li);
 
+void exibe(Lista *li);
+
 
 
 

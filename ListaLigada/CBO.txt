@@ -1,0 +1,25 @@
+4221-05 - Secretaria
+5173-10 - Seguranca
+2410-05 - Advogado
+2144-05 - Engenheiro mecanico
+2142-05 - Engenheiro civil
+2148-10 - Engenheiro cartografo
+2146-05 - Engenheiro dos materiais
+2141-05 - Arquiteto de edificacoes
+2141-10 - Arquiteto de interiores
+3182-05 - Analista de sistemas
+2124-05 - Desenhista mecanico
+2512-25 - Analista fiscal
+7163-05 - Vidraceiro
+8601-15 - Supervisor de eletrica
+4122-05 - Office boy
+7201-35 - Gerente de pintura
+1416-15 - Gerente de logistica
+1427-05 - Gerente de manutencao
+1423-15 - Gerente de marketing
+1413-05	- Gerente de obras
+5143-20 - Faxineiro
+2143-05 - Engenheiro elétrico
+2522-10 - Contador
+9511-05 - Eletricista
+5171-10 - Bombeiro civil

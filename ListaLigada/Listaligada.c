@@ -329,7 +329,7 @@ void menu(Lista *li){
             escolha='z';
 
         switch(escolha) {
-            //Criando lista vazia
+
             case '1':
                 chave=1;
 
@@ -337,7 +337,7 @@ void menu(Lista *li){
                 scanf("%i",&func.id);
 
                 printf("Digite o nome do funcionario: ");
-                scanf("%i",&func.nome);
+                fgets(func.nome,101,stdin);
                 getchar();
                 fflush(stdin);
 
@@ -350,7 +350,6 @@ void menu(Lista *li){
 
                 lista_CBO();
                 printf("Selecione o cargo desejado: \n\n");
-                printf("\n\n");
                 scanf("%i",&func.cargo);
 
                 x=insere_ordenada_lista(li, func);
@@ -381,9 +380,9 @@ void menu(Lista *li){
                 if(x){
                     printf("Consulta realizada com sucesso!\n");
                     printf("ID: %i\n",func.id);
-                    printf("Nome: %c \n",func.nome);
+                    printf("Nome: %s \n",func.nome);
                     printf("Idade: %i\n",func.idade);
-                    printf("Cargo: %i \n",func.cargo);
+                    printf("Cargo CBO: %i \n",func.cargo);
                     printf("Salario: %i \n",func.salario);
 
 
@@ -409,7 +408,7 @@ void menu(Lista *li){
                 if(x){
                     printf("Consulta realizada com sucesso!\n");
                     printf("ID: %i\n",func.id);
-                    printf("Nome: %s \n",func.nome);
+                    printf("Nome: %c \n",func.nome);
                     printf("Idade: %i\n",func.idade);
                     printf("Cargo: %i \n",func.cargo);
                     printf("Salario: %i \n",func.salario);
@@ -448,12 +447,19 @@ void lista_CBO(){
         exit(1);
     }
     int i;
-    char c = f1;
-    while(c != EOF){
-        printf("%c",c);
+    char c[50];
 
-        c = fgetc(f1);
-     }
+
+        while(fgets(c,sizeof(c),f1)!=NULL){
+
+                 printf("%s",c);
+                    i=c;
+                 i++;
+        }
+        printf("\n");
+
+
+
 
      fclose(f1);
 }

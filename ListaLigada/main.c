@@ -6,13 +6,9 @@
 int main()
 {
   Lista *li;
-
   li = criaLista();
   menu(li);
-
-
-
-apagaLista(li);
+  apagaLista(li);
 
     return 0;
 }
