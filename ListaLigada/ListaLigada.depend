@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1477353927 source:c:\users\aluno\desktop\listaligada\listaligada.c
+	<stdio.h>
+	<stdlib.h>
+	"Listaligada.h"
+
+1477353879 c:\users\aluno\desktop\listaligada\listaligada.h
+
+1477354132 source:c:\users\aluno\desktop\listaligada\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Listaligada.h"
+
+1481085935 source:c:\users\carlysson\desktop\listaligada\listaligada.c
+	<stdio.h>
+	<stdlib.h>
+	"Listaligada.h"
+
+1481123307 c:\users\carlysson\desktop\listaligada\listaligada.h
+
+1481124116 source:c:\users\carlysson\desktop\listaligada\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Listaligada.h"
+
