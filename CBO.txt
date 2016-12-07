@@ -1,20 +1,50 @@
+secretaria
 4221-05
+seguranca
 5173-10
+advogado
 2410-05
+engenheiro mecanico
 2144-05
+engenheiro civil
 2142-05
+engenheiro cartografo
 2148-10
+engenheiro dos materiais
 2146-05
+arquiteto de edificacoes
 2141-05
+arquiteto de interiores
 2141-10
+analista de sistemas
 3182-05
+desenhista mecanico
 2124-05
+analista fiscal
 2512-25
+vidraceiro
 7163-05
+supervisor de eletrica
 8601-15
+office boy
 4122-05
+gerente de pintura
 7201-35
+gerente de logistica
 1416-15
+gerente de manutencao
 1427-05
+gerente de marketing
 1423-15
-1413-05
+gerente de obras
+1413-05	
+Faxineiro
+5143-20
+Engenheiro elétrico
+2143-05
+Contador
+2522-10
+Eletricista
+9511-05
+Bombeiro civil
+5171-10
