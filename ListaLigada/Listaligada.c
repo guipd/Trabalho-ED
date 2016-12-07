@@ -302,6 +302,10 @@ void menu(Lista *li){
     char escolha;
     int chave=0;
     FUNCIONARIO func;
+    FUNCIONARIO* func1;
+    func1 = &func;
+
+    system("cls");
 
     //Laço que irá mostrar o menu esperando uma opção (char)
     do {
@@ -328,29 +332,34 @@ void menu(Lista *li){
             case '1':
                 chave=1;
 
-                printf("Digite o ID");
+                printf("Digite o ID: ");
                 scanf("%i",&func.id);
+
                 printf("Digite o nome do funcionario: ");
                 scanf("%i",&func.nome);
                 getchar();
                 fflush(stdin);
+
                 printf("Digite a idade: ");
                 scanf("%i",&func.idade);
+
                 printf("Digite seu salario: ");
                 scanf("%i",&func.salario);
-                printf("Selecione o cargo desejado: ");
+
+                printf("Selecione o cargo desejado: \n\n");
+                lista_CBO();
                 scanf("%i",&func.cargo);
 
                 x=insere_ordenada_lista(li, func);
                 if(x){
-                    printf("Inserido com sucesso: %i ", x);
+                    printf("Inserido com sucesso: %i ");
                 }else{
                     printf("Erro ao inserir! ");
                 }
                 break;
             //Exibindo todos elementos
             case '7':
-                exibe(li);
+           //     exibe_dados(func1);
                 break;
             //Exibindo tamanho da lista
             case '8':
@@ -365,19 +374,34 @@ void menu(Lista *li){
             case 'b':
                 printf("Digite o id desejado para a remoção: ");
                 scanf("%i",&id);
-                remove_lista(li,id);
+                x = remove_lista(li,id);
+                if(x){
+                    printf("Removido com sucesso!");
+                }else{
+                    printf("Erro!");
+                }
                 break;
             //Buscando elementos
             case 'c':
                 printf("Digite o id desejado para a busca:");
                 scanf("%i",&id);
                 x = consulta_lista_id(li,id,&func);
+                if(x){
+                    printf("Consulta realizada com sucesso!\n");
+                    printf("ID: %i\n",func.id);
+                    sprintf("Nome: %s \n",func.nome);
+                    printf("Idade: %i\n",func.idade);
+                    printf("Cargo: %i \n",func.cargo);
+                    printf("Salario: %i \n",func.salario);
+
+                    system("cls");
+                }
 
                 break;
             //Saindo e finalizando o programa
             case 'd':
-                fprintf(stderr,"Obrigado por utilizar esse programa!\n");
-                fprintf(stderr,"------>Terminal de Informação<------\n\n");
+                printf(stderr,"Obrigado por utilizar esse programa!\n");
+                printf(stderr,"------>Terminal de Informação<------\n\n");
 
                 exit(0);
                 break;
@@ -395,6 +419,22 @@ void menu(Lista *li){
 }
 
 
+void lista_CBO(){
+    FILE *f1;
 
+    f1 = fopen("CBO.txt","r");
+    if(f1==NULL){
+        printf("Erro ao tentar abrir o arquivo!\n");
+        system("pause");
+        exit(1);
+    }
+    char c = f1;
+    while(c != EOF){
+        printf("%c",c);
+        c = fgetc(f1);
+     }
+
+     fclose(f1);
+}
 
 
